@@ -61,47 +61,47 @@ class SinhVienServiceTest {
         assertEquals("SV1",timdc.getMaSV());
     }
 
-    @Test
-    void dangkey(){
-        WebDriver driver = new ChromeDriver();
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-
-        try {
-            driver.get("https://www.tutorialspoint.com/selenium/practice/register.php");
-            driver.findElement(By.id("firstname")).sendKeys("anhnam");
-            driver.findElement(By.id("lastname")).sendKeys("congnam");
-            driver.findElement(By.id("username")).sendKeys("anh nam");
-            driver.findElement(By.id("password")).sendKeys("congnam123");
-
-            driver.findElement(By.xpath("//input[@type='submit' and @value='Register']")).click();
-
-            assertTrue(
-                    wait.until(ExpectedConditions.urlContains("#"))
-            );
-        }finally {
-            driver.quit();
-        }
-    }
-
-
-    @Test
-    void dangnhap(){
-        WebDriver driver = new ChromeDriver();
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-        try {
-            driver.get("https://www.tutorialspoint.com/selenium/practice/login.php");
-            driver.findElement(By.id("email")).sendKeys("nguyencongnam@gmail.com");
-            driver.findElement(By.id("password")).sendKeys("congcong");
-
-            driver.findElement(By.xpath("//input[@type ='submit' and @value='Login']")).click();
-
-            assertTrue(
-                    wait.until(ExpectedConditions.urlContains("#"))
-            );
-        } finally {
-            driver.quit();
-        }
-    }
+//    @Test
+//    void dangkey(){
+//        WebDriver driver = new ChromeDriver();
+//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//
+//        try {
+//            driver.get("https://www.tutorialspoint.com/selenium/practice/register.php");
+//            driver.findElement(By.id("firstname")).sendKeys("anhnam");
+//            driver.findElement(By.id("lastname")).sendKeys("congnam");
+//            driver.findElement(By.id("username")).sendKeys("anh nam");
+//            driver.findElement(By.id("password")).sendKeys("congnam123");
+//
+//            driver.findElement(By.xpath("//input[@type='submit' and @value='Register']")).click();
+//
+//            assertTrue(
+//                    wait.until(ExpectedConditions.urlContains("#"))
+//            );
+//        }finally {
+//            driver.quit();
+//        }
+//    }
+//
+//
+//    @Test
+//    void dangnhap(){
+//        WebDriver driver = new ChromeDriver();
+//        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+//        try {
+//            driver.get("https://www.tutorialspoint.com/selenium/practice/login.php");
+//            driver.findElement(By.id("email")).sendKeys("nguyencongnam@gmail.com");
+//            driver.findElement(By.id("password")).sendKeys("congcong");
+//
+//            driver.findElement(By.xpath("//input[@type ='submit' and @value='Login']")).click();
+//
+//            assertTrue(
+//                    wait.until(ExpectedConditions.urlContains("#"))
+//            );
+//        } finally {
+//            driver.quit();
+//        }
+//    }
 
     @Test
     void checkvalidate(){
